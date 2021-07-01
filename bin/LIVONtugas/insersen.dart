@@ -36,48 +36,45 @@ void main() {
   // }
 
   //  cara 3
-  // List<int> angka = [6,7,-1,8,4];
-  //
-  // for (int i = 0; i<angka.length;i++) {
-  //   int patokan = angka[i];
-  //   int moveTo = 0;
-  //   print("patokan = $patokan");
-  //   for (int j = i+1;j<angka.length;j++) {
-  //     if (patokan > angka[j]) {
-  //       patokan = angka[j];
-  //       moveTo = j;
-  //     }
-  //   }
-  //   print("patokan baru $patokan");
-  //   if (patokan < angka[i]){
-  //     var tmp = angka[i];
-  //     angka[i] = patokan;
-  //     angka[moveTo] =tmp;
-  //     print(angka);
-  //   }
-  //
-  // }
-  // print(angka);
+  List<int> angka = [6,7,-1,8,4];
 
-  //cara 4
-  var list = [3,2,4,1,5,6];
-  for(int i = list.length; i > 0; i--){
-    var patokan = list[i-1];
-    var update = 0;
-    for(int j = i-1; j > 0; j--){
-      if (patokan > list[j]){ //  6>5
-        patokan = list[j];    //  5
-        update = j;           //
+  for (int i = 0; i<angka.length-1;i++) {
+    int patokan = angka[i];
+    int moveTo = 0;
+    for (int j = i+1;j<angka.length;j++) {
+      if (patokan > angka[j]) {
+        patokan = angka[j];
+        moveTo = j;
       }
     }
-    if(patokan < list[i-1]){
-      var tmp = list[i-1];
-      list[i-1] = patokan;
-      list[update] = tmp;
-      patokan = tmp;
+    if (patokan < angka[i]){
+      var tmp = angka[i];
+      angka[i] = patokan;
+      angka[moveTo] =tmp;
     }
-    print(list);
+    print(angka);
   }
+  print(angka);
+
+  //cara 4
+  // var list = [3,2,4,1,5,6];
+  // for(int i = list.length; i > 0; i--){
+  //   var patokan = list[i-1];
+  //   var update = 0;
+  //   for(int j = i-1; j > 0; j--){
+  //     if (patokan > list[j]){ //  6>5
+  //       patokan = list[j];    //  5
+  //       update = j;           //
+  //     }
+  //   }
+  //   if(patokan < list[i-1]){
+  //     var tmp = list[i-1];
+  //     list[i-1] = patokan;
+  //     list[update] = tmp;
+  //     patokan = tmp;
+  //   }
+  //   print(list);
+  // }
 
 
 }
