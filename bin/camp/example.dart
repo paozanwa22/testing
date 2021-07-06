@@ -29,7 +29,7 @@ void main(){
   stdout.write("Masukkan jumlah anggota : ");
   var jumlahAnggota = stdin.readLineSync()!;
 
-  for (int i = 0;i<int.parse(jumlahAnggota);i++) {
+  for (int i = 0; i < int.parse(jumlahAnggota); i++ ) {
     stdout.write("Masukkan data anggota ke ${i+1} \n");
     stdout.write("Nama : ");
     var nama = stdin.readLineSync()!;
