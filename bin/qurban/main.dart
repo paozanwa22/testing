@@ -1,9 +1,11 @@
 // sapi,7,1000.000, Ahmad, Abdul, dll...
 // kambing,5,500.000, Ahmad, Abdul, dll...
+
 // hewan = [sapi, kambing, kerbau, domba, onta]
 // Hewan | jumlah donatur | bobot | donatur, donatur2, dll..
 
 import 'dart:io';
+// import 'qurban.dart';
 import 'kambing.dart';
 import 'unta.dart';
 import 'sapi.dart';
@@ -40,7 +42,13 @@ void main() {
           Sapi sapi = Sapi();
           totalSapi += sapi.jumlah();
           bobotSapi += sapi.bobot();
-          donaturSapi.add(sapi.donatur());
+          for(int i = 0; i < totalSapi * 7; i++){
+            // if(sapi.donatur().isEmpty){
+            //   break;
+            // }
+              donaturSapi.add(sapi.donatur());
+          }
+
         }else if(value == 'kambing'){
           Kambing kambing = Kambing();
           totalKambing += kambing.jumlah();
@@ -70,7 +78,7 @@ void main() {
 
   print('');
   print('Sapi, $totalSapi, $bobotSapi, $donaturSapi');
-  print('Kambing, $totalKambing, $bobotKambing, $donaturKambing');
-  print('Unta, $totalUnta, $bobotUnta, $donaturUnta');
+  // print('Kambing, $totalKambing, $bobotKambing, $donaturKambing');
+  // print('Unta, $totalUnta, $bobotUnta, $donaturUnta');
 
 }
